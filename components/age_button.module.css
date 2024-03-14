@@ -1,0 +1,14 @@
+
+.btn_secondary{
+    display: inline-block;
+    padding: 12px,36px;
+    margin:10px,0;
+    text-decoration: none;
+    overflow: hidden;
+    color: rgb(183, 45, 45);
+    text-transform: uppercase;
+    font-size: 23px;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #FBC252 60%, #FF6E31);
+  }
