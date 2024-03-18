@@ -1,5 +1,37 @@
+'use client';
+
+import { Container } from "react-bootstrap";
+
+import React,{useEffect,useState} from "react";
 export default function ProgressBar(){
-    return(<div className="">location of the progressbar</div>);
-    
+    const [scrollPercentage, setscrollPercentage] = useState(20);
+    useEffect(()=>{
+        const handleScroll = ()=>{
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+            const scrollY = window.scrollY;
+            const scrollPercentage = (scrollY / (documentHeight - windowHeight)) * 100;
+            console.log(scrollPercentage);
+            setscrollPercentage(scrollPercentage);
+        }
+        window.addEventListener("scroll",handleScroll);
+        return ()=>{
+            window.removeEventListener("scroll",handleScroll);
+        }
+    })
+    return(
+        <div id = "progress-container" 
+            style = {{
+                height:"85px",
+                width:"100%", 
+                backgroundColor:"transparent",
+                position:"fixed",
+                top:"0",
+                left:"0",
+                right:"0"}}>
+            <div className="progress-fill" 
+                style={{height:"100%",background:"linear-gradient(to right, #ff0000, #ffff00)",width:`${scrollPercentage}%`}}></div>
+        </div>
+    );
 }
 

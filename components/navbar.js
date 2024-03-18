@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Navbar(){
     return (
-        <nav className="navbar navbar-expand-lg" style={{ backgroundColor: 'orange' }}>
+        <nav className="navbar navbar-expand-lg fixed-top" style={{ backgroundColor: 'orange' }}>
             <div className="container">
                 <Link href="/">
                     <Image src = '/images/LOGO.png' width = {100} height={60} className="navbar-brand" alt=""></Image>
@@ -18,8 +18,13 @@ export default function Navbar(){
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/about">
+                            <Link href="/">
                                 <button className="nav-link">About</button>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href="/">
+                                <button className="nav-link">contact us</button>
                             </Link>
                         </li>
                         {/* Add more links as needed */}
