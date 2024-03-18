@@ -12,19 +12,19 @@ export default function Ages_Container() {
         <Col md={4} className="d-flex flex-column align-items-center justify-content-center text-center">
           <Image src='/images/playtime.png' width={150} height={150} />
           <h2 className="fw-normal">under 5 years old</h2>
-          <p>Learn some basics before elementary school. </p>
+          <p>Learn fun basics before starting elementary school. </p>
           <p>
-            <Link href="/new_page" className={styles.btn_secondary} id="5Y">
+            <Link href="/under5yearold" className={styles.btn_secondary} id="5Y">
               View details &raquo;
             </Link>
           </p>
         </Col>
-        <Col md={4} className="d-flex flex-column align-items-center justify-content-center text-center">
+        <Col md={4} className=" d-flex flex-column align-items-center justify-content-center text-center">
           <Image src='/images/student.png' width={150} height={150} />
           <h2 className="fw-normal">7-15 year old</h2>
           <p>Learn all subjects before going to college.</p>
           <p>
-            <Link href="/" className={styles.btn_secondary} id="715Y">
+            <Link href="/seventofifteenyearold" className={styles.btn_secondary} id="715Y">
               View details &raquo;
             </Link>
           </p>
@@ -32,9 +32,9 @@ export default function Ages_Container() {
         <Col md={4} className="d-flex flex-column align-items-center justify-content-center text-center">
           <Image src='/images/student1.png' width={150} height={150} />
           <h2 className="fw-normal">over 18 years old</h2>
-          <p> Knowledge for your area of study!!</p>
+          <p> Prepare for your major of your university!</p>
           <p>
-            <Link href="/" className={styles.btn_secondary} id="18Y">
+            <Link href="/over18yearold" className={styles.btn_secondary} id="18Y">
               View details &raquo;
             </Link>
           </p>

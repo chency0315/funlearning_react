@@ -1,10 +1,8 @@
 'use client';
 
-import { Container } from "react-bootstrap";
-
 import React,{useEffect,useState} from "react";
 export default function ProgressBar(){
-    const [scrollPercentage, setscrollPercentage] = useState(20);
+    const [scrollPercentage, setscrollPercentage] = useState(0);
     useEffect(()=>{
         const handleScroll = ()=>{
             const windowHeight = window.innerHeight;

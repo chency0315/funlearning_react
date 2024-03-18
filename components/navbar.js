@@ -1,8 +1,6 @@
 // components/Navbar.js
 import Image from "next/image";
 import Link from 'next/link';
-
-
 export default function Navbar(){
     return (
         <nav className="navbar navbar-expand-lg fixed-top" style={{ backgroundColor: 'orange' }}>
@@ -14,17 +12,17 @@ export default function Navbar(){
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
                             <Link href="/">
-                                <button className="nav-link">Home</button>
+                                <button className="nav-link" styles = {{textDecoration:'none'}}>Home</button>
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link href="/">
-                                <button className="nav-link">About</button>
+                                <button className="nav-link" styles = {{textDecoration:'none'}}>About</button>
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/">
-                                <button className="nav-link">contact us</button>
+                            <Link href="/contactus">
+                                <button className="nav-link" styles = {{textDecoration:'none'}}>contact us</button>
                             </Link>
                         </li>
                         {/* Add more links as needed */}
