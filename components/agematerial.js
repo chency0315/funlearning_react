@@ -1,31 +1,4 @@
 import styles from './age_button.module.css';
-// import Container from 'react-bootstrap/Container';
-// export default function AgeMaterial() {
-//   return (
-//     <Container>
-//       <div className='row featurette'>
-//         <div className="col-md-4 d-flex flex-column align-items-center">
-//           <h2>BabyBus</h2>
-//           <p className="lead">
-//             Baby Bus, the first choice for 300 million families worldwide,
-//             is your neighborhood expert in early childhood education.
-//           </p>
-//           <ul>
-//             <li>Think independently</li>
-//             <li>Build self-confidence</li>
-//             <li>Respect others</li>
-//             <li>Explore the world</li>
-//           </ul>
-//           <a href="https://www.youtube.com/@BabyBusTC/featured" className={styles.btn_secondary} style={{ textDecoration: "none" }}>Take me there!</a>
-//         </div>
-//         <div className="col-md-8 d-flex justify-content-center">
-//           <img src='images/babybus.png' width={500} height={400} alt='BabyBus' />
-//         </div>
-//       </div>
-//       <hr className="featurette-divider" />
-//     </Container>
-//   );
-// }
 import { Container, Row, Col } from 'react-bootstrap';
 
 export default function AgeMaterial() {
@@ -40,8 +13,6 @@ export default function AgeMaterial() {
               <br />
               is your neighborhood expert in early childhood education.
             </p>
-          </div>
-          <div>
             <ul>
               <li>Think independently</li>
               <li>Build self-confidence</li>
@@ -55,7 +26,7 @@ export default function AgeMaterial() {
           <img src='images/babybus.png' width={500} height={400} alt='BabyBus' />
         </Col>
       </Row>
-      <div className="happy" style={{ margin: '3% 20%', display: 'flex', justifyContent: 'center' }}>
+      <div className="happy" style={{ margin: '5% 20%', display: 'flex', justifyContent: 'center' }}>
   <div className="bdcard">
     <iframe
       width="560"
@@ -77,8 +48,10 @@ export default function AgeMaterial() {
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowFullScreen
     ></iframe>
+    
   </div>
 </div>
+
 
 <div className="row featurette" styles={{ margin: '3% 20%' }}>
   <div className="col-md-1"></div>
@@ -91,8 +64,8 @@ export default function AgeMaterial() {
 
       Our educational videos for kids are informed by research and are full of learning standards that will help preschoolers thrive! Along with baby videos and toddlers videos, we have preschool videos for children. We also have music classes and teach sign language. <br />
 
-      Ms Rachel has a masters in music education from NYU and is getting a second masters in early childhood education. You can trust her to provide interactive, quality screen time. Parents and children can watch and learn together. You will love our baby video that is full of brain building songs and play ideas. Ms Rachel loves to teach and loves your wonderful family! </p>
-    <a href="https://www.youtube.com/@msrachel/videos" className="btn btn-secondary" style={{ textDecoration: 'none' }}>Take me there!</a>
+      </p>
+    <a href="https://www.youtube.com/@msrachel/videos" className={styles.btn_secondary} style={{ textDecoration: 'none' }}>Take me there!</a>
   </div>
   <div className="col-md-1"></div>
 </div>
