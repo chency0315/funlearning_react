@@ -21,7 +21,7 @@ const websites = [
   { src: 'https://www.khanacademy.org/',name:'Khan academy',description:"self-learning", img_src:'/images/khan.png',lead_description:"Learn for free about math, art, computer programming, economics, physics, chemistry, biology, medicine, finance, history, and more."},
 ];
 
-export default function HomePage({ Component, pageProps }) {
+export default function HomePage() {
   const intro_title_styles={
         fontFamily: "Arial",
         textAlign: "center",
