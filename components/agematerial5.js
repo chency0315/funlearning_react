@@ -1,33 +1,35 @@
 import styles from './age_button.module.css';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 export default function AgeMaterial() {
   return (
     <Container>
-      <Row className='featurette'>
-        <Col md={3} className='d-flex flex-column justify-content-between'>
-          <div>
-            <h2>BabyBus</h2>
-            <p className="lead">
-              Baby Bus, the first choice for 300 million families worldwide,
+      <div className="row featurette" styles={{ margin: '3% 20%' }}>
+        <div className="col-md-1"></div>
+          <div className="col-md-4">
+            <img src="images/babybus.png" style={{ width: '400px', height: '350px', borderRadius: '50%' }} />
+          </div>
+      <div className="col-md-6" style={{ margin: '-4% 0' }}>
+    <h2 className="featurette-heading fw-normal lh-1">Toddler Learning Videos<br/><br/></h2>
+    <p className="lead">Baby Bus, the first choice for 300 million families worldwide,
               <br />
               is your neighborhood expert in early childhood education.
-            </p>
-            <ul>
+              At BabyBus, our goal is to make learning a fun and imaginative experience for kids aged 2 - 6 by creating classic nursery rhymes, kid songs, and stories with 2D & 3D animations. 
+              <br/>
+              <ul>
               <li>Think independently</li>
               <li>Build self-confidence</li>
               <li>Respect others</li>
               <li>Explore the world</li>
             </ul>
-            <a href="https://www.youtube.com/@BabyBusTC/featured" className={styles.btn_secondary} style={{ textDecoration: "none" }}>Take me there!</a>
-          </div>
-        </Col>
-        <Col md={9} className='d-flex justify-content-center'>
-          <img src='images/babybus.png' width={500} height={400} alt='BabyBus' />
-        </Col>
-      </Row>
+      </p>
+    <a href="https://www.youtube.com/@BabyBusTC/featured" className={styles.btn_secondary} style={{ textDecoration: 'none' }}>Take me there!</a>
+  </div>
+  <div className="col-md-1"></div>
+</div>
+    
       <div className="happy" style={{ margin: '5% 20%', display: 'flex', justifyContent: 'center' }}>
-  <div className="bdcard">
+  <div className="bdcard" style={{ marginRight: '20px' }}>
     <iframe
       width="560"
       height="315"
@@ -51,7 +53,8 @@ export default function AgeMaterial() {
     
   </div>
 </div>
-
+<br/>
+<br/>
 
 <div className="row featurette" styles={{ margin: '3% 20%' }}>
   <div className="col-md-1"></div>
@@ -70,7 +73,7 @@ export default function AgeMaterial() {
   <div className="col-md-1"></div>
 </div>
 
-      <div className="happy" style={{ margin: '3% 20%', display: 'flex', justifyContent: 'center' }}>
+      <div className="happy" style={{ margin: '5% 20%', display: 'flex', justifyContent: 'center' }}>
   <div className="bdcard" style={{ marginRight: '20px' }}>
     <iframe
       width="560"

@@ -1,10 +1,9 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from './age_button.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Ed_Web({websites}){
-  console.log(websites);
+  // console.log(websites);
     return (
       websites.map((website,index) => (
         <div className="row featurette" key = {index}>

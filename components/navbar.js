@@ -11,18 +11,18 @@ export default function Navbar(){
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <Link href="/">
-                                <button className="nav-link" styles = {{textDecoration:'none'}}>Home</button>
+                            <Link href="/" className="nav-link" styles = {{textDecoration:'none'}}>
+                                Home
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/">
-                                <button className="nav-link" styles = {{textDecoration:'none'}}>About</button>
+                            <Link href="/" className="nav-link" styles = {{textDecoration:'none'}}>
+                                About
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link href="/contactus">
-                                <button className="nav-link" styles = {{textDecoration:'none'}}>contact us</button>
+                            <Link href="/contactus" className="nav-link" styles = {{textDecoration:'none'}}>
+                               contact us
                             </Link>
                         </li>
                         {/* Add more links as needed */}

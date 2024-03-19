@@ -1,5 +1,5 @@
 import ProgressBar from "../../../components/progressbar";
-import AgeMaterial from "../../../components/agematerial";
+import AgeMaterial from "../../../components/agematerial5";
 import Navbar from "../../../components/navbar";
 import Link from 'next/link';
 export default function Under5yearold() {
@@ -17,14 +17,14 @@ export default function Under5yearold() {
     return (
         <body className='body'>
             <Navbar/>
-            <h4 id = 'introtitle' style={intro_title_styles}>For under 5 years old</h4>
+            <h4 style={intro_title_styles}>For under 5 years old</h4>
             <AgeMaterial/>
             <hr className="featurette-divider"></hr>
             <ProgressBar/>
             <footer class="container">
                 <Link class=" btn float-end" href = "/under5yearold">Back to top</Link>
                 <p>&copy; FunLearning Company, Inc. &middot; <a href="/" style={{ textDecoration: 'none' }}>About us</a></p>
-                </footer>
-            </body>
+            </footer>
+        </body>
     );
 }

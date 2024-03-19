@@ -1,4 +1,3 @@
-
 .btn_secondary{
     display: inline-block;
     padding: 12px,36px;
@@ -11,4 +10,9 @@
     letter-spacing: 1px;
     border-radius: 50px;
     background: linear-gradient(135deg, #FBC252 60%, #FF6E31);
+    border:none;
+  }
+  .btn_secondary:hover{
+    background-color: #ffffff;
+    color:#ffffff;
   }
