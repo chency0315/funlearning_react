@@ -1,14 +1,15 @@
 import Link from "next/link"
 import ContactUs from "../../../components/contact-us"
+import Navbar from "../../../components/navbar"
+const footer = {
+    marginTop: "auto",
+    position:"absolute" 
+}
 export default function Contactus(){
     return (
-        <body className='body'>
+        <body className='body' >
+            <Navbar />
             <ContactUs/>
-            <hr className="featurette-divider"/>
-            <footer class="container">
-                <Link class=" btn float-end" href = "/contactus">Back to top</Link>
-                <p>&copy; FunLearning Company, Inc. &middot; <a href="/" style={{ textDecoration: 'none' }}>About us</a></p>
-            </footer>
         </body>
     )
 }

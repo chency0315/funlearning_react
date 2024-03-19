@@ -12,7 +12,7 @@ import Web_Sliders from '../../components/websites_slider';
 
 const images = [
   { src: '/images/background1.jpeg', alt: 'First slide', label: 'Welcome to FunLearning!!', description: 'This is a place for kids to explore and learn!' },
-  { src: '/images/teach.jpg', alt: 'Second slide', label: 'Educational videos', description: 'links for teachings from professionals, come check it out!!' },
+  { src: '/images/kid_raising.jpg', alt: 'Second slide', label: 'Educational videos', description: 'links for teachings from professionals, come check it out!!' },
   { src: '/images/college.jpg', alt: 'Third slide', label: 'About us', description: 'This website shows education resources for different ages' }
 ];
 const websites = [
@@ -36,14 +36,16 @@ export default function HomePage({ Component, pageProps }) {
     <body className='body'>
       <Navbar />
       <ProgressBar />
+      <div style ={{marginTop:'70px'}}>
       <PhotoCarousel images={images} />
+      </div>
       <Ages_Container />
       <Container className="text-center">
         <hr className="featurette-divider"></hr>
-        <h2 style = {intro_title_styles}>Explore popular websites</h2><br></br>
+        <h2 style = {intro_title_styles}>Explore popular websites</h2><br/>
         <Web_Sliders/>
         <hr className="featurette-divider"></hr>
-        <h2 style = {intro_title_styles}>fun videos</h2><br></br>
+        <h2 style = {intro_title_styles}>fun videos</h2><br/>
         <FunVideos/>
         <hr className="featurette-divider"></hr>
         <h2 style = {intro_title_styles}>Educational websites</h2>

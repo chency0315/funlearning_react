@@ -12,7 +12,7 @@ export default function PhotoCarousel({ images }) {
             className="d-block w-100"
             src={image.src}
             alt={image.alt}
-            width={500}
+            width= {500}
             height={600}
           />
           <Carousel.Caption>
