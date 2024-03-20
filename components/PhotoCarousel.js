@@ -8,11 +8,11 @@ export default function PhotoCarousel({ images }) {
     <Carousel data-bs-theme="light">
       {images.map((image, index) => (
         <Carousel.Item key={index}>
-          <Image
-            className="d-block w-100"
+          <img
+            className="d-block w-100" style={{maxWidth:'100%', maxHeight:'100%'}}
             src={image.src}
             alt={image.alt}
-            width= {500}
+            width= {400}
             height={600}
           />
           <Carousel.Caption>
