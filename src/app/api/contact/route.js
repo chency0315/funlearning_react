@@ -1,31 +1,5 @@
-// import {transporter,mailOptions} from '../../../../config/nodemailer';
-// export default async function POST(request){
-//         const data = request.body;
-//         // console.log(data);
-//         if (!data.name || !data.email || !data.subject || !data.message){
-//             return res.status(400).json({message:"Bad request"});
-//         }
-//         try{
-//             await transporter.sendMail({
-//                 ...mailOptions,
-//                 subject:data.subject,
-//                 text:"This is a test string",
-//                 html:"<h1>Test Title</h1><p>Some body text</p>",
-//             });
-//             return {
-//                 status: 200,
-//                 body: { success: true }
-//             };
-//         }catch (error){
-//             console.log(error);
-//             return {
-//                 status:400,
-//                 body:{message:error.message}
-//             };
-//         }
-    
-// };
 import { mailOptions, transporter } from "../../../../config/nodemailer";
+import { NextResponse } from "next/server";
 
 const CONTACT_MESSAGE_FIELDS = {
   name: "Name",
@@ -50,10 +24,10 @@ const generateEmailContent = (data) => {
   };
 };
 
-export default async function POST(request){
+export async function POST(request){
     const data = request.body;
     if (!data || !data.name || !data.email || !data.subject || !data.message) {
-      return response.status(400).send({ message: "Bad request" });
+      return NextResponse.status(400).send({ message: "Bad request" });
     }
 
     try {
@@ -63,10 +37,10 @@ export default async function POST(request){
         subject: data.subject,
       });
 
-      return response.status(200).json({ success: true });
+      return NextResponse.status(200).json({ success: true });
     } catch (err) {
       console.log(err);
-      return response.status(400).json({ message: err.message });
+      return  NextResponse.status(400).json({ message: err.message });
     }
   
   return res.status(400).json({ message: "Bad request" });
