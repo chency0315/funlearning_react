@@ -7,7 +7,7 @@ export default function AgeMaterial7to15() {
                 <div className="col-md-1"></div>
                     <div className='col-md-5' style = {{margin: '3% 0'}}>
                     <h2 class="featurette-heading fw-normal lh-1">RayDu English<br/></h2>
-                        <p class="lead">Hello, I'm Du, and I'll be sharing English on this 
+                        <p class="lead">Hello, I am Du, and I will be sharing English on this 
                         channel through a variety of interesting topics. I hope it will rekindle your interest in learning English! Occasionally, I will also share my life through videos.
                         </p>
                         <a href="https://www.youtube.com/@rayduenglish/about" className={styles.btn_secondary} style={{textDecoration:"none"}}>Take me there!</a>

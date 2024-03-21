@@ -7,7 +7,7 @@ export default function AgeMaterial18(){
             <div className="col-md-1"></div>
                 <div className='col-md-5' style = {{margin: '3% 0'}}>
                 <h2 class="featurette-heading fw-normal lh-1">BRIGHT SIDE<br/></h2>
-                    <p class="lead">Whether you're into recent discoveries, space exploration, true stories, fitness, fun tests, and riddles, or useful tips for self-improvement, psychology, gadgets, or just your day-to-day routine, there's something for everyone!<br/>
+                    <p class="lead">Whether you are into recent discoveries, space exploration, true stories, fitness, fun tests, and riddles, or useful tips for self-improvement, psychology, gadgets, or just your day-to-day routine, there is something for everyone!<br/>
             You can expect all that and more coming at you in 3 top-quality videos every single day. <br/>
             If youve got a thirst for knowledge that never quits, then join a community of tens of millions and growing! We have a good time, so take your shoes off, kick back, and make yourself at home here on the Bright Side of life!
 
