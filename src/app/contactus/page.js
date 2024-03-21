@@ -1,13 +1,16 @@
 "use client";
 import Navbar from "../../../components/navbar"
 import styles from '../../../components/age_button.module.css';
-import {useState, setState} from "react";
+import { Container } from "react-bootstrap";
+import {useState} from 'react';
+
 const initValues = {
     name:"",
     email:"",
     subject:"",
     message:"",
 }
+let btn_name = "Send a message";
 const initState={values:initValues};
 
 export default function Contactus(){
@@ -24,22 +27,41 @@ export default function Contactus(){
 }
     const [state, setState] = useState(initState);
     const {values} = state;
-    const handleChange = ({target}) => 
-        setState((prev)=>({
-        ...prev,
-        values:{
-            ...prev.values,
-            [target.name]:target.value,
-        },
+  
+    const handleChange = ({ target }) =>
+    setState((prev) => ({
+      ...prev,
+      values: {
+        ...prev.values,
+        [target.name]: target.value,
+      },
     }));
-        const onSubmit = async () =>{
-            setState((prev)=>({
-                ...prev,
-            }));
-            await sendContactForm(values);
-        };
+
+  const onSubmit = async () => {
+    setState((prev) => ({
+      ...prev,
+      isLoading: true,
+    }));
+    try {
+      await sendContactForm(values);
+      setTouched({});
+      setState(initState);
+      toast({
+        title: "Message sent.",
+        status: "success",
+        duration: 2000,
+        position: "top",
+      });
+    } catch (error) {
+      setState((prev) => ({
+        ...prev,
+        isLoading: false,
+        error: error.message,
+      }));
+    }
+  };
     return (
-        <body >
+        <Container>
             <Navbar />
       <div>
       <h2 className="major" style={intro_title_styles}>Contact us</h2>
@@ -70,7 +92,7 @@ export default function Contactus(){
       </div>
       <div className="pt-0 mb-4">
         <input 
-          type="subject"
+          type="text"
           placeholder='subject'
           name="subject"
           value={values.subject}
@@ -80,6 +102,7 @@ export default function Contactus(){
       </div>
       <div className="pt-0 mb-4">
         <textarea
+          type = "text"
           placeholder="Your message"
           name="message"
           value={values.message}
@@ -95,17 +118,17 @@ export default function Contactus(){
           disabled={!values.name || !values.email || !values.subject || !values.message}
           onClick={onSubmit}
           >
-          Send a message
+          {btn_name}
         </button>
       </div>
       </div>
     </form>
     <div>
         <h5 style = {{fontSize:"15px"}}>If you have any questions or suggestions 
-        <br/>please don't hesitate to contact us.</h5>
+        <br/>please do not hesitate to contact us.</h5>
       </div>
     </div>
     </div>
-        </body>
+    </Container>
     )
 }

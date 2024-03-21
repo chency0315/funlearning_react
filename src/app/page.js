@@ -91,8 +91,8 @@ export default function HomePage({ Component, pageProps }) {
       </Container>
       <Container styles={{padding:'1px'}}>
       <Ed_Web websites={websites}/>
-      <footer class="container">
-        <Link class=" btn float-end" href = "/"><button className={new_styles.footer_btn}>Back to top</button></Link>
+      <footer className="container">
+        <Link className=" btn float-end" href = "/"><button className={new_styles.footer_btn}>Back to top</button></Link>
         <p>&copy; FunLearning Company, Inc. &middot; <a href="/" style={{ textDecoration: 'none' }}>About us</a></p>
       </footer>
       </Container>
