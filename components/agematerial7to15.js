@@ -14,7 +14,7 @@ export default function AgeMaterial7to15() {
                         <a href="https://www.youtube.com/@rayduenglish/about" className={styles.btn_secondary} style={{textDecoration:"none"}}>Take me there!</a>
                     </div>
                     <div class="col-md-5" style={{margin: "-10% 0"}}>
-                        <Image src = 'images/raydu.jpg' style={{ position: 'relative', top: '130px', width: '300px', height: '300px', borderRadius: '50%' }} alt=''/>
+                        <Image src = '/images/raydu.jpg' style={{ position: 'relative', top: '130px', width: '300px', height: '300px', borderRadius: '50%' }} width = {300}  height={300} alt=''/>
                     </div>
                     <div className="col-md-1"></div>
             </div>
@@ -37,7 +37,7 @@ export default function AgeMaterial7to15() {
                         </div>
                     </div>
                     <div class="col-md-4" style={{margin: "-10% 0"}}>
-                        <Image src = 'images/OverSimplified.jpg' style={{ position: 'relative', top: '180px', width: '300px', height: '300px', borderRadius: '50%', right: '50px' }} alt =''/>
+                        <Image src = '/images/OverSimplified.jpg' style={{ position: 'relative', top: '180px', width: '300px', height: '300px', borderRadius: '50%', right: '50px' }} width = '300' height = '300'alt =''/>
                     </div>
                     <div className="col-md-1"></div>
             </div>
