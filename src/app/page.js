@@ -14,6 +14,7 @@ import data from '../../components/websites.json';
 import styles from '../../components/websites_slider.module.css';
 import new_styles from '../../components/nav-bar-buttons.module.css';
 import React, {useState,useEffect} from 'react';
+import Image from 'next/image';
 
 const images = [
   { src: '/images/background_original.jpeg', alt: 'First slide', label: 'Welcome to FunLearning!!', description: 'This is a place for kids to explore and learn!' },
@@ -78,10 +79,10 @@ export default function HomePage() {
             </div>
         </div>
         <button className={styles.left_btn}>
-          <img src = "/images/left_arrow.png"  width={50} height={40} onClick={handleScrollLeft}/>
+          < Image src = "/images/left_arrow.png"  width={50} height={40} onClick={handleScrollLeft} alt ='left'/>
         </button>
         <button className={styles.right_btn}>
-          <img src = "/images/right_arrow.png" width={50} height={40} onClick={handleScrollRight}/>
+          <Image src = "/images/right_arrow.png" width={50} height={40} onClick={handleScrollRight} alt = 'right'/>
         </button>
         <hr className="featurette-divider"></hr>
         <h2 style = {intro_title_styles}>fun videos</h2><br/>

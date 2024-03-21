@@ -1,5 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import styles from './age_button.module.css';
+import Image from 'next/image';
 export default function AgeMaterial7to15() {
     return (
         <Container>
@@ -13,7 +14,7 @@ export default function AgeMaterial7to15() {
                         <a href="https://www.youtube.com/@rayduenglish/about" className={styles.btn_secondary} style={{textDecoration:"none"}}>Take me there!</a>
                     </div>
                     <div class="col-md-5" style={{margin: "-10% 0"}}>
-                        <img src = 'images/raydu.jpg' style={{ position: 'relative', top: '130px', width: '300px', height: '300px', borderRadius: '50%' }}/>
+                        <Image src = 'images/raydu.jpg' style={{ position: 'relative', top: '130px', width: '300px', height: '300px', borderRadius: '50%' }} alt=''/>
                     </div>
                     <div className="col-md-1"></div>
             </div>
@@ -36,7 +37,7 @@ export default function AgeMaterial7to15() {
                         </div>
                     </div>
                     <div class="col-md-4" style={{margin: "-10% 0"}}>
-                        <img src = 'images/OverSimplified.jpg' style={{ position: 'relative', top: '180px', width: '300px', height: '300px', borderRadius: '50%', right: '50px' }}/>
+                        <Image src = 'images/OverSimplified.jpg' style={{ position: 'relative', top: '180px', width: '300px', height: '300px', borderRadius: '50%', right: '50px' }} alt =''/>
                     </div>
                     <div className="col-md-1"></div>
             </div>

@@ -1,6 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import styles from './age_button.module.css';
-
+import Image from 'next/image';
 export default function AgeMaterial18(){
     return(<Container>
         <div className='row featurette ' styles={{ margin: '-3% 0'}}>
@@ -15,7 +15,7 @@ export default function AgeMaterial18(){
                     <a href="https://www.youtube.com/@BRIGHTSIDEOFFICIAL/featured" className={styles.btn_secondary} style={{textDecoration:"none"}}>Take me there!</a>
                 </div>
                 <div class="col-md-5" style={{margin: "-10% 0"}}>
-                    <img src = 'images/BRIGHTSIDE.jpg' style={{ position: 'relative', top: '200px', width: '300px', height: '300px', borderRadius: '50%', left: '100px' }}/>
+                    <Image src = 'images/BRIGHTSIDE.jpg' style={{ position: 'relative', top: '200px', width: '300px', height: '300px', borderRadius: '50%', left: '100px' }} alt=''/>
                 </div>
                 <div className="col-md-1"></div>
         </div>
@@ -40,7 +40,7 @@ export default function AgeMaterial18(){
                     </div>
                 </div>
                 <div class="col-md-4" style={{margin: "-10% 0"}}>
-                    <img src = 'images/spark.jpg' style={{ position: 'relative', top: '200px', width: '300px', height: '300px', borderRadius: '50%', right: '50px', left:'20px'}}/>
+                    <Image src = 'images/spark.jpg' style={{ position: 'relative', top: '200px', width: '300px', height: '300px', borderRadius: '50%', right: '50px', left:'20px'}} alt =''/>
                 </div>
                 <div className="col-md-1"></div>
         </div>

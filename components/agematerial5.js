@@ -1,5 +1,6 @@
 import styles from './age_button.module.css';
 import { Container } from 'react-bootstrap';
+import Image from 'next/image';
 
 export default function AgeMaterial() {
   return (
@@ -7,7 +8,7 @@ export default function AgeMaterial() {
       <div className="row featurette" styles={{ margin: '3% 20%' }}>
         <div className="col-md-1"></div>
           <div className="col-md-4">
-            <img src="images/babybus.png" style={{ width: '400px', height: '350px', borderRadius: '50%' }} />
+            <Image src="images/babybus.png" style={{ width: '400px', height: '350px', borderRadius: '50%' }} alt=''/>
           </div>
       <div className="col-md-6" style={{ margin: '-4% 0' }}>
     <h2 className="featurette-heading fw-normal lh-1">Toddler Learning Videos<br/><br/></h2>
@@ -59,7 +60,7 @@ export default function AgeMaterial() {
 <div className="row featurette" styles={{ margin: '3% 20%' }}>
   <div className="col-md-1"></div>
   <div className="col-md-4">
-    <img src="images/Songs for Littles - Toddler Learning Videos .jpg" style={{ width: '350px', height: '350px', borderRadius: '50%' }} />
+    <Image src="images/Songs for Littles - Toddler Learning Videos .jpg" style={{ width: '350px', height: '350px', borderRadius: '50%' }} alt =''/>
   </div>
   <div className="col-md-6" style={{ margin: '-4% 0' }}>
     <h2 className="featurette-heading fw-normal lh-1">Toddler Learning Videos<br /></h2>
