@@ -27,7 +27,7 @@ const websites = [
 ];
 const websites_car = data;
 
-export default function HomePage({ Component, pageProps }) {
+export default function HomePage() {
   const [position, setPosition] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
 
