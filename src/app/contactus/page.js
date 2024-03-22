@@ -64,7 +64,7 @@ export default function Contactus(){
         <Container>
             <Navbar />
       <div>
-      <h2 className="major" style={intro_title_styles}>Contact us</h2>
+      <h2 className="major" style={intro_title_styles}>Contact</h2>
     <div className='container col-md-6 text-center' style = {{marginTop: '-150px'}}>
     <form>
       <div >
@@ -75,7 +75,7 @@ export default function Contactus(){
           name="name"
           value={values.name}
           onChange={handleChange}
-          className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
+          className="focus:outline-none focus:ring relative w-full px-4 py-4 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
           required
         />
       </div>
@@ -86,7 +86,7 @@ export default function Contactus(){
           name="email"
           value={values.email}
           onChange={handleChange}
-          className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
+          className="focus:outline-none focus:ring relative w-full px-4 py-4 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
           required
         />
       </div>
@@ -97,7 +97,7 @@ export default function Contactus(){
           name="subject"
           value={values.subject}
           onChange={handleChange}
-          className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
+          className="focus:outline-none focus:ring relative w-full px-4 py-4 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
           required/>
       </div>
       <div className="pt-0 mb-4">
@@ -107,7 +107,7 @@ export default function Contactus(){
           name="message"
           value={values.message}
           onChange={handleChange}
-          className="focus:outline-none focus:ring relative w-full px-3 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
+          className="focus:outline-none focus:ring relative w-full px-4 py-4 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
           required
         />
       </div>

@@ -25,43 +25,38 @@ export default function AgeMaterial() {
       </p>
     <a href="https://www.youtube.com/@BabyBusTC/featured" className={styles.btn_secondary} style={{ textDecoration: 'none' }}>Take me there!</a>
   </div>
-  <div className="col-md-1"></div>
 </div>
-    
-      <div className="happy" style={{ margin: '5% 20%', display: 'flex', justifyContent: 'center' }}>
-  <div className="bdcard" style={{ marginRight: '20px' }}>
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/BLMHtWt_R1A"
-      title="YouTube video player"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen
-    ></iframe>
-  </div>
-  <div className="bdtext">
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/KU1I-kW3IfU"
-      title="YouTube video player"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen
-    ></iframe>
-    
-  </div>
-</div>
+  <div className='container' style = {{marginTop:"50px"}}>
+      <div className='row justify-content-center'>
+        <div className='col-lg-5 mb-3'>
+          <iframe
+            width="100%"
+            height="300"
+            src="https://www.youtube.com/embed/BLMHtWt_R1A"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen/>
+      </div>
+        <div className='col-lg-5 mb-3'>
+          <iframe
+            width="100%"
+            height="300"
+            src="https://www.youtube.com/embed/KU1I-kW3IfU"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
+      </div>
+    </div>
+<hr className="featurette-divider"/>
 <br/>
-<br/>
-
-<div className="row featurette" styles={{ margin: '3% 20%' }}>
+<div className="row featurette" styles={{ margin: '3% 20%'}}>
   <div className="col-md-1"></div>
   <div className="col-md-4">
     <img src="images/Songs for Littles - Toddler Learning Videos .jpg" style={{ width: '350px', height: '350px', borderRadius: '50%' }} alt =''/>
   </div>
-  <div className="col-md-6" style={{ margin: '-4% 0' }}>
+  <div className="col-md-6" style={{ margin: '-2% 0' }}>
     <h2 className="featurette-heading fw-normal lh-1">Toddler Learning Videos<br /></h2>
     <p className="lead">Toddler learning videos and baby learning videos that help children learn to talk, learn letters, numbers, colors, animal sounds and more! Ms Rachel is a real teacher who teaches through play, nursery rhymes & kids songs & techniques recommended by speech therapists and early childhood experts! She is a master at encouraging speech and language.<br />
 
@@ -70,33 +65,32 @@ export default function AgeMaterial() {
       </p>
     <a href="https://www.youtube.com/@msrachel/videos" className={styles.btn_secondary} style={{ textDecoration: 'none' }}>Take me there!</a>
   </div>
-  <div className="col-md-1"></div>
 </div>
-
-      <div className="happy" style={{ margin: '5% 20%', display: 'flex', justifyContent: 'center' }}>
-  <div className="bdcard" style={{ marginRight: '20px' }}>
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/47MNn4bsmSw"
-      title="YouTube video player"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen
-    ></iframe>
+  <div className='container' style = {{marginTop:"30px"}}>
+      <div className='row justify-content-center'>
+        <div className='col-lg-5 mb-3'>
+          <iframe
+            width="100%"
+            height="300"
+            src="https://www.youtube.com/embed/47MNn4bsmSw"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+    </div>
+        <div className='col-lg-5 mb-3'>
+          <iframe
+            width="100%"
+            height="300"
+            src="https://www.youtube.com/embed/HsT3iI6dT5U"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+     </div>
+    </div>
   </div>
-  <div className="bdtext">
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/HsT3iI6dT5U"
-      title="YouTube video player"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen
-    ></iframe>
-  </div>
-</div>
+ 
     </Container>
   );
 }

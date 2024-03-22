@@ -24,7 +24,7 @@ export default function Over18yearold() {
             <ProgressBar/>
             <footer class="container">
                 <Link class=" btn float-end" href = "/over18yearold"><button className={styles.footer_btn}>Back to top</button></Link>
-                <p>&copy; FunLearning Company, Inc. &middot; <a href="/" style={{ textDecoration: 'none' }}>About us</a></p>
+                <p>&copy; FunLearning Company, Inc. &middot; <a href="/" style={{textDecoration:"none", color:"grey"}}>About us</a></p>
             </footer>
         </body>
     );

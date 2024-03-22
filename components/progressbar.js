@@ -1,5 +1,4 @@
 'use client';
-
 import React,{useEffect,useState} from "react";
 export default function ProgressBar(){
     const [scrollPercentage, setscrollPercentage] = useState(0);
@@ -20,13 +19,15 @@ export default function ProgressBar(){
     return(
         <div id = "progress-container" 
             style = {{
-                height:"85px",
+                height:"15px",
                 width:"100%", 
                 backgroundColor:"transparent",
                 position:"fixed",
                 top:"0",
                 left:"0",
-                right:"0"}}>
+                right:"0",
+                marginTop:"80px"
+                }}>
             <div className="progress-fill" 
                 style={{height:"100%",background:"linear-gradient(to right, #ff0000, #ffff00)",width:`${scrollPercentage}%`}}></div>
         </div>

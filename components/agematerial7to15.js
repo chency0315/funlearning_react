@@ -41,12 +41,13 @@ export default function AgeMaterial7to15() {
                     </div>
                     <div className="col-md-1"></div>
             </div>
+
                 <div className='happy' style={{margin: "13% 20%", display: 'flex', justifyContent: 'center' }}>
-                    <div className='bdcard' style={{marginRight: "20px"}}>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/HpAV5iIR_Ow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div className='bdcard' style={{marginRight:"20px"}}>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/26EivpCPHnQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                     <div class="bdtext">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/PGfok91i100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/hRSGxw2AQnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
         </Container>

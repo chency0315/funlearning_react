@@ -16,6 +16,7 @@ import new_styles from '../../components/nav-bar-buttons.module.css';
 import React, {useState,useEffect} from 'react';
 import Image from 'next/image';
 
+
 const images = [
   { src: '/images/background_original.jpeg', alt: 'First slide', label: 'Welcome to FunLearning!!', description: 'This is a place for kids to explore and learn!' },
   { src: '/images/kid_raising_original.jpg', alt: 'Second slide', label: 'Educational videos', description: 'links for teachings from professionals, come check it out!!' },
@@ -62,12 +63,13 @@ export default function HomePage() {
         marginTop: "30px",
         marginBottom: "-30px",
   }
+
   return (
     <body className='body'>
       <Navbar />
       <ProgressBar />
       <div style ={{marginTop:'70px'}}>
-      <PhotoCarousel images={images} />
+        <PhotoCarousel images={images} />
       </div>
       <Ages_Container />
       <Container className="text-center">
@@ -94,7 +96,7 @@ export default function HomePage() {
       <Ed_Web websites={websites}/>
       <footer className="container">
         <Link className=" btn float-end" href = "/"><button className={new_styles.footer_btn}>Back to top</button></Link>
-        <p>&copy; FunLearning Company, Inc. &middot; <a href="/" style={{ textDecoration: 'none' }}>About us</a></p>
+        <p>&copy; FunLearning Company, Inc. &middot; <a href="/" style = {{textDecoration:"none", color:"grey"}}>About us</a></p>
       </footer>
       </Container>
     </body>

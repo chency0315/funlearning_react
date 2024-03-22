@@ -16,7 +16,7 @@ export default function Ed_Web({websites}){
             <Link href = {`${website.src}`}  className={styles.btn_secondary} style={{textDecoration:'none'}}>Take me there!</Link>
         </div>
         <div className="col-md-5">
-      <Image src = {website.img_src} width = {400} height ={400} style={{marginTop:'20px'}} alt =''/>
+      <Image src = {website.img_src} width = {400} height ={400} style={{marginTop:'70px'}} alt =''/>
     </div>
     <hr className="featurette-divider"></hr>
   </div>

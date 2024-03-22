@@ -24,10 +24,11 @@ const generateEmailContent = (data) => {
   };
 };
 
-export async function POST(request){
-    const data = request.body;
+export default async function handler(req,res){
+  if (req.method==="POST"){
+    const data = req.body;
     if (!data || !data.name || !data.email || !data.subject || !data.message) {
-      return NextResponse.status(400).send({ message: "Bad request" });
+      return res.status(400).send({ message: "Bad request" });
     }
 
     try {
@@ -37,11 +38,11 @@ export async function POST(request){
         subject: data.subject,
       });
 
-      return NextResponse.status(200).json({ success: true });
+      return res.status(200).json({ success: true });
     } catch (err) {
       console.log(err);
-      return  NextResponse.status(400).json({ message: err.message });
+      return res.status(400).json({ message: err.message });
     }
-  
+  }
   return res.status(400).json({ message: "Bad request" });
 };
