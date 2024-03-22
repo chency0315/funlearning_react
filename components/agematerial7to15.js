@@ -18,12 +18,14 @@ export default function AgeMaterial7to15() {
                     </div>
                     <div className="col-md-1"></div>
             </div>
-            <div className='happy' style={{margin: "13% 20%", display: 'flex', justifyContent: 'center' }}>
-                <div className='bdcard' style={{marginRight: "20px"}}>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HpAV5iIR_Ow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                <div class="bdtext">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PGfok91i100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div className='container' style = {{marginTop:"150px"}}>
+                    <div className='row justify-content-center'>
+                        <div className='col-lg-5 mb-3'>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/HpAV5iIR_Ow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen/>
+                        </div>
+                            <div className='col-lg-5 mb-3'>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/PGfok91i100" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen/>
+                    </div>
                 </div>
             </div>
             <hr className="featurette-divider"/>
@@ -41,15 +43,16 @@ export default function AgeMaterial7to15() {
                     </div>
                     <div className="col-md-1"></div>
             </div>
-
-                <div className='happy' style={{margin: "13% 20%", display: 'flex', justifyContent: 'center' }}>
-                    <div className='bdcard' style={{marginRight:"20px"}}>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/26EivpCPHnQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div className='container' style = {{marginTop:"220px"}}>
+                <div className='row justify-content-center'>
+                    <div className='col-lg-5 mb-3'>
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/26EivpCPHnQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen/>
                     </div>
-                    <div class="bdtext">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/hRSGxw2AQnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
+                        <div className='col-lg-5 mb-3'>
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/hRSGxw2AQnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen/>
                 </div>
+            </div>
+        </div>
         </Container>
     );
 }

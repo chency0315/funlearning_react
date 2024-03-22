@@ -90,7 +90,6 @@ export default function AgeMaterial() {
      </div>
     </div>
   </div>
- 
     </Container>
   );
 }

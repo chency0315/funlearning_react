@@ -1,6 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import styles from './age_button.module.css';
-import Image from 'next/image';
+
 export default function AgeMaterial18(){
     return(<Container>
         <div className='row featurette ' styles={{ margin: '-3% 0'}}>
@@ -10,7 +10,6 @@ export default function AgeMaterial18(){
                     <p class="lead">Whether you are into recent discoveries, space exploration, true stories, fitness, fun tests, and riddles, or useful tips for self-improvement, psychology, gadgets, or just your day-to-day routine, there is something for everyone!<br/>
             You can expect all that and more coming at you in 3 top-quality videos every single day. <br/>
             If youve got a thirst for knowledge that never quits, then join a community of tens of millions and growing! We have a good time, so take your shoes off, kick back, and make yourself at home here on the Bright Side of life!
-
                     </p>
                     <a href="https://www.youtube.com/@BRIGHTSIDEOFFICIAL/featured" className={styles.btn_secondary} style={{textDecoration:"none"}}>Take me there!</a>
                 </div>
@@ -19,12 +18,13 @@ export default function AgeMaterial18(){
                 </div>
                 <div className="col-md-1"></div>
         </div>
-        <div className='happy' style={{margin: "13% 20%", display: 'flex', justifyContent: 'center' }}>
-            <div className='bdcard' style={{marginRight: "20px"}}>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/GhO_2lGqaEE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-            <div class="bdtext">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZVJulFwPFtY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div className='container' style = {{marginTop:"10px"}}>
+                <div className='row justify-content-center'>
+                    <div className='col-lg-5 mb-3'>
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/GhO_2lGqaEE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen/>
+             </div>
+                <div className='col-lg-5 mb-3'>
+                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/ZVJulFwPFtY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen/>                </div>
             </div>
         </div>
         <hr className="featurette-divider"/>
@@ -44,13 +44,15 @@ export default function AgeMaterial18(){
                 </div>
                 <div className="col-md-1"></div>
         </div>
-            <div className='happy' style={{margin: "13% 20%", display: 'flex', justifyContent: 'center' }}>
-                <div className='bdcard' style={{marginRight: "20px"}}>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fEMTYjyLo9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                <div class="bdtext">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/J0BRlFMK0lY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
+            <div className='container' style = {{marginTop:"200px"}}>
+                <div className='row justify-content-center'>
+                    <div className='col-lg-5 mb-3'>
+                        <iframe width="100%" height="300" src="https://www.youtube.com/embed/fEMTYjyLo9A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                <div className='col-lg-5 mb-3'>
+                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/J0BRlFMK0lY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
             </div>
+        </div>
     </Container>);
 }
