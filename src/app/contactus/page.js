@@ -28,38 +28,38 @@ export default function Contactus(){
     const [state, setState] = useState(initState);
     const {values} = state;
   
-    const handleChange = ({ target }) =>
-    setState((prev) => ({
-      ...prev,
-      values: {
-        ...prev.values,
-        [target.name]: target.value,
-      },
-    }));
+    // const handleChange = ({ target }) =>
+    // setState((prev) => ({
+    //   ...prev,
+    //   values: {
+    //     ...prev.values,
+    //     [target.name]: target.value,
+    //   },
+    // }));
 
-  const onSubmit = async () => {
-    setState((prev) => ({
-      ...prev,
-      isLoading: true,
-    }));
-    try {
-      await sendContactForm(values);
-      setTouched({});
-      setState(initState);
-      toast({
-        title: "Message sent.",
-        status: "success",
-        duration: 2000,
-        position: "top",
-      });
-    } catch (error) {
-      setState((prev) => ({
-        ...prev,
-        isLoading: false,
-        error: error.message,
-      }));
-    }
-  };
+  // const onSubmit = async () => {
+  //   setState((prev) => ({
+  //     ...prev,
+  //     isLoading: true,
+  //   }));
+  //   try {
+  //     await sendContactForm(values);
+  //     setTouched({});
+  //     setState(initState);
+  //     toast({
+  //       title: "Message sent.",
+  //       status: "success",
+  //       duration: 2000,
+  //       position: "top",
+  //     });
+  //   } catch (error) {
+  //     setState((prev) => ({
+  //       ...prev,
+  //       isLoading: false,
+  //       error: error.message,
+  //     }));
+  //   }
+  // };
     return (
         <Container>
             <Navbar />
@@ -74,7 +74,7 @@ export default function Contactus(){
           placeholder="Your name"
           name="name"
           value={values.name}
-          onChange={handleChange}
+          // onChange={handleChange}
           className="focus:outline-none focus:ring relative w-full px-4 py-4 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
           required
         />
@@ -85,7 +85,7 @@ export default function Contactus(){
           placeholder="Email"
           name="email"
           value={values.email}
-          onChange={handleChange}
+          // onChange={handleChange}
           className="focus:outline-none focus:ring relative w-full px-4 py-4 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
           required
         />
@@ -96,7 +96,7 @@ export default function Contactus(){
           placeholder='subject'
           name="subject"
           value={values.subject}
-          onChange={handleChange}
+          // onChange={handleChange}
           className="focus:outline-none focus:ring relative w-full px-4 py-4 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
           required/>
       </div>
@@ -106,7 +106,7 @@ export default function Contactus(){
           placeholder="Your message"
           name="message"
           value={values.message}
-          onChange={handleChange}
+          // onChange={handleChange}
           className="focus:outline-none focus:ring relative w-full px-4 py-4 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
           required
         />
@@ -116,7 +116,7 @@ export default function Contactus(){
           className={styles.btn_secondary}
           type="submit"
           disabled={!values.name || !values.email || !values.subject || !values.message}
-          onClick={onSubmit}
+          // onClick={onSubmit}
           >
           {btn_name}
         </button>
