@@ -1,6 +1,7 @@
 {
   "name": "funlearning_react",
   "version": "0.1.0",
+  "proxy":"https://localhost:5000",
   "private": true,
   "scripts": {
     "dev": "next dev",

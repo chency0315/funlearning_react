@@ -1,16 +1,18 @@
 "use client";
 import Navbar from "../../../components/navbar"
 import styles from '../../../components/age_button.module.css';
-import { Container } from "react-bootstrap";
+import {Container} from "react-bootstrap";
 import {useState} from 'react';
 
 const initValues = {
     name:"",
+    phone:"",
     email:"",
+    department:"",
     subject:"",
-    message:"",
+    content:"",
 }
-let btn_name = "Send a message";
+
 const initState={values:initValues};
 
 export default function Contactus(){
@@ -23,11 +25,12 @@ export default function Contactus(){
         wordSpacing: "12px",
         color: "rgba(0,0,0,0.8)",
         padding: "200px",
-        textCenter: "true"
+        // textCenter: "true"
 }
     const [state, setState] = useState(initState);
     const {values} = state;
-  
+    let btn = "send a message";
+
     const handleChange = ({ target }) =>
     setState((prev) => ({
       ...prev,
@@ -37,35 +40,43 @@ export default function Contactus(){
       },
     }));
 
-  const onSubmit = async () => {
-    setState((prev) => ({
-      ...prev,
-      isLoading: true,
-    }));
-    try {
-      await sendContactForm(values);
-      setTouched({});
-      setState(initState);
-      toast({
-        title: "Message sent.",
-        status: "success",
-        duration: 2000,
-        position: "top",
-      });
-    } catch (error) {
-      setState((prev) => ({
+  // on submit contact form
+    const onSubmit = async() =>{
+      setState((prev)=>({
         ...prev,
-        isLoading: false,
-        error: error.message,
       }));
-    }
-  };
+      //call send email api
+      try{
+        fetch("http://localhost:3000/api/contactUs",{
+              method:"POST",
+              body: JSON.stringify(values),
+              headers:{"Content-Type":"application/json"},
+              mode:'cors'
+            }).then((response)=>{
+                if(!response.ok) throw new Error("Fail to sent message");
+                  return response.json();
+            })
+          setState(initState);
+          btn = "message sent";
+          // toast({
+          //         title: "Message sent.",
+          //         status: "success",
+          //         duration: 2000,
+          //         position: "top",
+          //       });
+        }catch(error){
+          setState((prev) => ({
+              ...prev,
+              error:error.message
+        }));
+      }
+    };
     return (
         <Container>
-            <Navbar />
+          <Navbar />
       <div>
       <h2 className="major" style={intro_title_styles}>Contact</h2>
-    <div className='container col-md-6 text-center' style = {{marginTop: '-150px'}}>
+    <div className='container col-mb-4 text-center' style = {{marginTop: '-150px'}}>
     <form>
       <div >
       <div className="pt-0 mb-4" >
@@ -75,7 +86,18 @@ export default function Contactus(){
           name="name"
           value={values.name}
           onChange={handleChange}
-          className="focus:outline-none focus:ring relative w-full px-4 py-4 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
+          className="focus:outline-none focus:ring relative w-full px-4 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
+          required
+        />
+      </div>
+      <div className="pt-0 mb-4" >
+        <input
+          type="tel"
+          placeholder="phone number"
+          name="phone"
+          value={values.phone}
+          onChange={handleChange}
+          className="focus:outline-none focus:ring relative w-full px-4 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
           required
         />
       </div>
@@ -86,9 +108,18 @@ export default function Contactus(){
           name="email"
           value={values.email}
           onChange={handleChange}
-          className="focus:outline-none focus:ring relative w-full px-4 py-4 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
-          required
-        />
+          className="focus:outline-none focus:ring relative w-full px-4 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
+          required/>
+      </div>
+      <div className="pt-0 mb-4">
+        <input
+          type="text"
+          placeholder="company/department"
+          name="department"
+          value={values.department}
+          onChange={handleChange}
+          className="focus:outline-none focus:ring relative w-full px-4 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
+          required/>
       </div>
       <div className="pt-0 mb-4">
         <input 
@@ -97,28 +128,26 @@ export default function Contactus(){
           name="subject"
           value={values.subject}
           onChange={handleChange}
-          className="focus:outline-none focus:ring relative w-full px-4 py-4 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
+          className="focus:outline-none focus:ring relative w-full px-4 py-3 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
           required/>
       </div>
       <div className="pt-0 mb-4">
         <textarea
           type = "text"
           placeholder="Your message"
-          name="message"
-          value={values.message}
+          name="content"
+          value={values.content}
           onChange={handleChange}
           className="focus:outline-none focus:ring relative w-full px-4 py-4 text-sm text-gray-600 placeholder-gray-400 bg-white border-0 rounded shadow outline-none"
-          required
-        />
+          required/>
       </div>
       <div className="pt-0 mb-3">
         <button
           className={styles.btn_secondary}
           type="submit"
-          disabled={!values.name || !values.email || !values.subject || !values.message}
-          onClick={onSubmit}
-          >
-          {btn_name}
+          disabled={!values.name || !values.email || !values.subject || !values.content ||!values.department||!values.phone}
+          onClick={onSubmit}>
+          {btn}
         </button>
       </div>
       </div>
