@@ -4,52 +4,23 @@ import Navbar from "../../components/navbar";
 import ProgressBar from '../../components/progressbar';
 import Ages_Container from '../../components/ages_container';
 import PhotoCarousel from '../../components/PhotoCarousel';
+import Rs_Car from '../../components/rs_car';
 import { Container } from 'react-bootstrap';
 import '../app/globals.css';
 import Ed_Web from '../../components/educational_websites';
 import FunVideos from '../../components/fun_videos';
 import Link from 'next/link';
 import Web_Sliders from '../../components/websites_slider';
-import data from '../../components/websites.json';
-import styles from '../../components/websites_slider.module.css';
+import images_data from '../../components/images.json';
+import websites_data from '../../components/web.json';
 import new_styles from '../../components/nav-bar-buttons.module.css';
-import React, {useState,useEffect} from 'react';
-import Image from 'next/image';
+import React from 'react';
 
 
-const images = [
-  { src: '/images/background_original.jpeg', alt: 'First slide', label: 'Welcome to FunLearning!!', description: 'This is a place for kids to explore and learn!' },
-  { src: '/images/kid_raising_original.jpg', alt: 'Second slide', label: 'Educational videos', description: 'links for teachings from professionals, come check it out!!' },
-  { src: '/images/college_original.jpg', alt: 'Third slide', label: 'About us', description: 'This website shows education resources for different ages' }
-];
-const websites = [
-  { src: 'https://kids.nationalgeographic.com/',name:'National Geograhic kids',description:"It's for kids.", img_src:'/images/national-geographic-kids-vector-logo.png',lead_description:"Visit National Geographic Kids today!"},
-  { src: 'https://thecrashcourse.com/',name:'Crash Course',description:"educate yourself!", img_src:'/images/cc.png',lead_description:"From courses like Astronomy to US History and Anatomy & Physiology it's got you covered with an awesome variety of AP high school curriculum topics. With various witty hosts at your service, you won't even notice you're getting smarter."},
-  { src: 'https://www.khanacademy.org/',name:'Khan academy',description:"self-learning", img_src:'/images/khan.png',lead_description:"Learn for free about math, art, computer programming, economics, physics, chemistry, biology, medicine, finance, history, and more."},
-];
-const websites_car = data;
+const images = images_data;
+const websites = websites_data;
 
 export default function HomePage() {
-  const [position, setPosition] = useState(0);
-  const [containerWidth, setContainerWidth] = useState(0);
-
-  useEffect(() => {
-    const container = document.querySelector(`.${styles.row_n}`);
-    if (container) {
-      setContainerWidth(container.scrollWidth);
-    }
-  }, []);
-  const handleScrollLeft = () => {
-    // setPosition(prePosition => prePosition+100)
-    const newPosition = position + 100;
-    setPosition(Math.min(newPosition, 0));
-  };
-  const handleScrollRight = () => {
-    // setPosition(prePosition => prePosition-100)
-    const newPosition = position - 100;
-    const maxPosition = -(containerWidth-window.innerWidth);
-    setPosition(Math.max(Math.min(newPosition, 0),maxPosition));
-  };
 
   const intro_title_styles={
         fontFamily: "Arial",
@@ -75,17 +46,8 @@ export default function HomePage() {
       <Container className="text-center">
         <hr className="featurette-divider"></hr>
         <h2 style = {intro_title_styles}>Explore popular websites</h2><br/>
-        <div className={styles.row_n}>
-            <div className={styles.row__inner} style = {{transform: `translateX(${position}%)`}}>
-              <Web_Sliders websites_car={websites_car}/>
-            </div>
-        </div>
-        <button className={styles.left_btn}>
-          < Image src = "/images/left_arrow.png"  width={50} height={40} onClick={handleScrollLeft} alt ='left'/>
-        </button>
-        <button className={styles.right_btn}>
-          <Image src = "/images/right_arrow.png" width={50} height={40} onClick={handleScrollRight} alt = 'right'/>
-        </button>
+        <Web_Sliders/>
+        <rs_Car/>
         <hr className="featurette-divider"></hr>
         <h2 style = {intro_title_styles}>fun videos</h2><br/>
         <FunVideos/>

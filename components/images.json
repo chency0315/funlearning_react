@@ -1,0 +1,5 @@
+[
+    { "src": "/images/background_original.jpeg", "alt": "First slide", "label": "Welcome to FunLearning!!", "description": "This is a place for kids to explore and learn!" },
+    { "src": "/images/kid_raising_original.jpg", "alt": "Second slide", "label": "Educational videos", "description": "links for teachings from professionals, come check it out!!" },
+    { "src": "/images/college_original.jpg", "alt": "Third slide", "label": "About us", "description": "This website shows education resources for different ages" }
+]

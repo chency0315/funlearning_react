@@ -3,7 +3,7 @@ import Navbar from "../../../components/navbar"
 import styles from '../../../components/age_button.module.css';
 import {Container} from "react-bootstrap";
 import {useState} from 'react';
-
+import sendContact from '../../../api/http/contactUs';
 const initValues = {
     name:"",
     phone:"",
@@ -28,8 +28,7 @@ export default function Contactus(){
         // textCenter: "true"
 }
     const [state, setState] = useState(initState);
-    const {values} = state;
-    let btn = "send a message";
+    const {values, btn} = state;
 
     const handleChange = ({ target }) =>
     setState((prev) => ({
@@ -44,26 +43,12 @@ export default function Contactus(){
     const onSubmit = async() =>{
       setState((prev)=>({
         ...prev,
+        btn:true
       }));
       //call send email api
       try{
-        fetch("http://localhost:3000/api/contactUs",{
-              method:"POST",
-              body: JSON.stringify(values),
-              headers:{"Content-Type":"application/json"},
-              mode:'cors'
-            }).then((response)=>{
-                if(!response.ok) throw new Error("Fail to sent message");
-                  return response.json();
-            })
+          await sendContact(values);
           setState(initState);
-          btn = "message sent";
-          // toast({
-          //         title: "Message sent.",
-          //         status: "success",
-          //         duration: 2000,
-          //         position: "top",
-          //       });
         }catch(error){
           setState((prev) => ({
               ...prev,
@@ -71,6 +56,7 @@ export default function Contactus(){
         }));
       }
     };
+
     return (
         <Container>
           <Navbar />
@@ -147,7 +133,7 @@ export default function Contactus(){
           type="submit"
           disabled={!values.name || !values.email || !values.subject || !values.content ||!values.department||!values.phone}
           onClick={onSubmit}>
-          {btn}
+          {btn ? 'Message sent' : 'Send a message'}
         </button>
       </div>
       </div>

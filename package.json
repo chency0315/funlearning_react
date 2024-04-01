@@ -1,7 +1,7 @@
 {
   "name": "funlearning_react",
   "version": "0.1.0",
-  "proxy":"https://localhost:5000",
+  "proxy": "https://localhost:5000",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -28,6 +28,7 @@
   "devDependencies": {
     "@types/node": "20.11.27",
     "@types/nodemailer": "^6.4.14",
+    "@types/react-slick": "^0.23.13",
     "eslint": "^8",
     "eslint-config-next": "14.1.3"
   },

@@ -1,0 +1,18 @@
+[
+    { "src": "https://kids.nationalgeographic.com/',name:'National Geograhic kids",
+    "description":"It's for kids.", 
+    "img_src":"/images/national-geographic-kids-vector-logo.png",
+    "lead_description":"Visit National Geographic Kids today!"
+    },
+    {"src": "https://thecrashcourse.com/",
+     "name":"Crash Course",
+     "description": "educate yourself!", 
+     "img_src":"/images/cc.png",
+     "lead_description":"From courses like Astronomy to US History and Anatomy & Physiology it's got you covered with an awesome variety of AP high school curriculum topics. With various witty hosts at your service, you won't even notice you're getting smarter."
+    },
+    {"src": "https://www.khanacademy.org/",
+    "name":"Khan academy",
+    "description":"self-learning", 
+    "img_src":"/images/khan.png",
+    "lead_description":"Learn for free about math, art, computer programming, economics, physics, chemistry, biology, medicine, finance, history, and more."}
+]
