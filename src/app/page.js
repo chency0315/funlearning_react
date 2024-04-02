@@ -1,21 +1,21 @@
 "use client";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../app/globals.css';
+import React from 'react';
+import { Container } from 'react-bootstrap';
+
+import Link from 'next/link';
 import Navbar from "../../components/navbar";
 import ProgressBar from '../../components/progressbar';
 import Ages_Container from '../../components/ages_container';
 import PhotoCarousel from '../../components/PhotoCarousel';
-import Rs_Car from '../../components/rs_car';
-import { Container } from 'react-bootstrap';
-import '../app/globals.css';
 import Ed_Web from '../../components/educational_websites';
 import FunVideos from '../../components/fun_videos';
-import Link from 'next/link';
-import Web_Sliders from '../../components/websites_slider';
+
+import Rs_Car from '../../components/rs_car';
 import images_data from '../../components/images.json';
 import websites_data from '../../components/web.json';
 import new_styles from '../../components/nav-bar-buttons.module.css';
-import React from 'react';
-
 
 const images = images_data;
 const websites = websites_data;
@@ -34,7 +34,6 @@ export default function HomePage() {
         marginTop: "30px",
         marginBottom: "-30px",
   }
-
   return (
     <body className='body'>
       <Navbar />
@@ -46,8 +45,9 @@ export default function HomePage() {
       <Container className="text-center">
         <hr className="featurette-divider"></hr>
         <h2 style = {intro_title_styles}>Explore popular websites</h2><br/>
-        <Web_Sliders/>
-        <rs_Car/>
+        {/* <Web_Sliders/> */}
+        <Rs_Car websities={websites}/>
+        <br/>
         <hr className="featurette-divider"></hr>
         <h2 style = {intro_title_styles}>fun videos</h2><br/>
         <FunVideos/>
