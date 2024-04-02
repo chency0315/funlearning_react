@@ -46,7 +46,7 @@ export default function HomePage() {
         <hr className="featurette-divider"></hr>
         <h2 style = {intro_title_styles}>Explore popular websites</h2><br/>
         {/* <Web_Sliders/> */}
-        <Rs_Car websities={websites}/>
+        <Rs_Car/>
         <br/>
         <hr className="featurette-divider"></hr>
         <h2 style = {intro_title_styles}>fun videos</h2><br/>
